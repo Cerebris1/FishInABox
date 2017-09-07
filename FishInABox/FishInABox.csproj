@@ -192,13 +192,32 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\FishWithTanks2Controller.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PET_GROUPController.cs" />
+    <Compile Include="Controllers\PET_INFOController.cs" />
+    <Compile Include="Controllers\PET_RECORDController.cs" />
+    <Compile Include="Controllers\PET_SIZEController.cs" />
+    <Compile Include="Controllers\RECORD_PACKINGController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\FishDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FishDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FishDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FishDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FishDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FishDB.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\FishWithTank.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -219,6 +238,21 @@
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\PET_GROUP.cs">
+      <DependentUpon>FishDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PET_INFO.cs">
+      <DependentUpon>FishDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PET_RECORD.cs">
+      <DependentUpon>FishDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PET_SIZE.cs">
+      <DependentUpon>FishDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RECORD_PACKING.cs">
+      <DependentUpon>FishDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -229,6 +263,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\FishDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FishDB.edmx</DependentUpon>
+      <LastGenOutput>FishDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\FishDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>FishDB.edmx</DependentUpon>
+      <LastGenOutput>FishDB.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\FishWithTank.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>FishWithTank.edmx</DependentUpon>
@@ -250,6 +294,13 @@
     </EntityDeploy>
     <Content Include="Models\FishWithTank.edmx.diagram">
       <DependentUpon>FishWithTank.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Models\FishDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>FishDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\FishDB.edmx.diagram">
+      <DependentUpon>FishDB.edmx</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\fishinaboxweb - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -299,11 +350,31 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\FishWithTanks2\Create.cshtml" />
-    <Content Include="Views\FishWithTanks2\Delete.cshtml" />
-    <Content Include="Views\FishWithTanks2\Details.cshtml" />
-    <Content Include="Views\FishWithTanks2\Edit.cshtml" />
-    <Content Include="Views\FishWithTanks2\Index.cshtml" />
+    <Content Include="Views\PET_GROUP\Create.cshtml" />
+    <Content Include="Views\PET_GROUP\Delete.cshtml" />
+    <Content Include="Views\PET_GROUP\Details.cshtml" />
+    <Content Include="Views\PET_GROUP\Edit.cshtml" />
+    <Content Include="Views\PET_GROUP\Index.cshtml" />
+    <Content Include="Views\PET_INFO\Create.cshtml" />
+    <Content Include="Views\PET_INFO\Delete.cshtml" />
+    <Content Include="Views\PET_INFO\Details.cshtml" />
+    <Content Include="Views\PET_INFO\Edit.cshtml" />
+    <Content Include="Views\PET_INFO\Index.cshtml" />
+    <Content Include="Views\PET_RECORD\Create.cshtml" />
+    <Content Include="Views\PET_RECORD\Delete.cshtml" />
+    <Content Include="Views\PET_RECORD\Details.cshtml" />
+    <Content Include="Views\PET_RECORD\Edit.cshtml" />
+    <Content Include="Views\PET_RECORD\Index.cshtml" />
+    <Content Include="Views\PET_SIZE\Create.cshtml" />
+    <Content Include="Views\PET_SIZE\Delete.cshtml" />
+    <Content Include="Views\PET_SIZE\Details.cshtml" />
+    <Content Include="Views\PET_SIZE\Edit.cshtml" />
+    <Content Include="Views\PET_SIZE\Index.cshtml" />
+    <Content Include="Views\RECORD_PACKING\Create.cshtml" />
+    <Content Include="Views\RECORD_PACKING\Delete.cshtml" />
+    <Content Include="Views\RECORD_PACKING\Details.cshtml" />
+    <Content Include="Views\RECORD_PACKING\Edit.cshtml" />
+    <Content Include="Views\RECORD_PACKING\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

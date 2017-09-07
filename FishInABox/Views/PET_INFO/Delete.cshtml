@@ -1,4 +1,4 @@
-﻿@model FishInABox.Models.FishWithTank
+﻿@model FishInABox.Models.PET_INFO
 
 @{
     ViewBag.Title = "Delete";
@@ -8,39 +8,31 @@
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>FishWithTank</h4>
+    <h4>PET_INFO</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Species)
+            @Html.DisplayNameFor(model => model.COMMON)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Species)
+            @Html.DisplayFor(model => model.COMMON)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Stock_On_Hand)
+            @Html.DisplayNameFor(model => model.SCIENTIFIC)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Stock_On_Hand)
+            @Html.DisplayFor(model => model.SCIENTIFIC)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Tank_Number)
+            @Html.DisplayNameFor(model => model.PET_GROUP.NAME)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Tank_Number)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Location)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Location)
+            @Html.DisplayFor(model => model.PET_GROUP.NAME)
         </dd>
 
     </dl>

@@ -8,7 +8,9 @@ namespace FishInABox
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
-            //filters.Add(new AuthorizeAttribute());
+
+            //Enable when going live
+            //filters.Add(new AuthorizeAttribute()); 
         }
     }
 }
