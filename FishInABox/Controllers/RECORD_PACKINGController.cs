@@ -15,7 +15,7 @@ namespace FishInABox.Controllers
         private AQUATIC_PET_STOREEntities db = new AQUATIC_PET_STOREEntities();
 
         // GET: RECORD_PACKING
-        public ActionResult Index(string searchString)
+        public ActionResult Index(string searchString) // This is the call for the search function which allows the table to be searched easily
         {
             var rECORD_PACKING = db.RECORD_PACKING.Include(r => r.PET_RECORD);
 
